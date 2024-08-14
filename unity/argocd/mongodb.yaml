@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mongodb
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: oci://registry-1.docker.io/bitnamicharts/mongodb
+    targetRevision: "latest"  # Specify the version or use "latest" to pull the most recent version
+    helm:
+      valueFiles:
+        - values/mongodb-values.yaml  # Specify your custom values.yaml file
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: mongodb
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

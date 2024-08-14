@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://dev.azure.com/Payoneer/DevOps/_git/devops-k8s-argocd
+    targetRevision: V2.11.3
+    path: mgmt
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd 

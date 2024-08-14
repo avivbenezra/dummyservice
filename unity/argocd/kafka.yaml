@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kafka
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: oci://registry-1.docker.io/bitnamicharts/kafka
+    targetRevision: "latest"  # Specify the version or use "latest" to pull the most recent version
+    helm:
+      valueFiles:
+        - values/kafka-values.yaml  # Specify your custom values.yaml file
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: kafka
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
