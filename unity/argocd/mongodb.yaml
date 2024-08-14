@@ -6,8 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: oci://registry-1.docker.io/bitnamicharts/mongodb
-    targetRevision: latest
+    repoURL: https://docker.io
+    chart: bitnamicharts/mongodb
+    targetRevision: 15.6.0
     helm:
       valueFiles:
         - values/mongodb-values.yaml
