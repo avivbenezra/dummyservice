@@ -9,9 +9,6 @@ spec:
     repoURL: https://github.com/avivbenezra/dummyservice
     targetRevision: main
     chart: helm-charts/consumer
-    helm:
-      valueFiles:
-        - values/consumer-values.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: consumer
