@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-org/helm-charts.git'
-    targetRevision: HEAD
+    repoURL: 'https://github.com/avivbenezra/dummyservice.git'
+    targetRevision: main
     chart: 'consumer-chart'
     helm:
       valueFiles:
