@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: publisher
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/your-org/helm-charts.git'
+    targetRevision: HEAD
+    chart: 'publisher-chart'
+    helm:
+      valueFiles:
+        - values/publisher-values.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: publisher
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
