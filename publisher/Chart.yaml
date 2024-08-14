@@ -1,5 +1,6 @@
 apiVersion: v2
 name: publisher
 description: A Helm chart for deploying the Publisher service
+type: application
 version: 0.1.0
 appVersion: "1.0.0"
