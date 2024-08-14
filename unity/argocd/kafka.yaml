@@ -7,6 +7,7 @@ spec:
   project: default
   source:
     repoURL: oci://registry-1.docker.io/bitnamicharts/kafka
+    chart: bitnamicharts/kafka
     targetRevision: 30.0.0
     helm:
       valueFiles:
