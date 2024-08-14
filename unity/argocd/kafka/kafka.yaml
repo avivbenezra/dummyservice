@@ -11,7 +11,7 @@ spec:
     targetRevision: 30.0.0
     helm:
       valueFiles:
-        - values/kafka-values.yaml 
+        - values.yaml 
   destination:
     server: https://kubernetes.default.svc
     namespace: kafka
