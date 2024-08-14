@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: argocd
-    repoURL: https://github.com/avivbenezra/dummyservice.git
+    repoURL: https://github.com/avivbenezra/dummyservice
     targetRevision: main
     directory:
       recurse: true
