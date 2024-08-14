@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/avivbenezra/dummyservice.git'
+    repoURL: 'https://github.com/avivbenezra/dummyservice'
     targetRevision: main
-    chart: 'consumer-chart'
+    chart: 'helm-charts/consumer'
     helm:
       valueFiles:
         - values/consumer-values.yaml
