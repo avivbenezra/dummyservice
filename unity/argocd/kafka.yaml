@@ -6,7 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: oci://registry-1.docker.io/bitnamicharts/kafka
+    repoURL: oci://registry-1.docker.io
+    chart: bitnamicharts/kafka
     targetRevision: latest
     helm:
       valueFiles:
