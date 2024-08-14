@@ -17,5 +17,5 @@ spec:
     namespace: mongodb
   syncPolicy:
     automated:
+      selfHeal: false
       prune: true
-      selfHeal: true
