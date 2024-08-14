@@ -6,13 +6,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: oci://registry-1.docker.io/bitnamicharts/kafka
-    targetRevision: "latest"  # Specify the version or use "latest" to pull the most recent version
+    repoURL: https://registry-1.docker.io/bitnamicharts/kafka
+    targetRevision: latest
     helm:
       valueFiles:
-        - values/kafka-values.yaml  # Specify your custom values.yaml file
+        - values/kafka-values.yaml 
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: kafka
   syncPolicy:
     automated:

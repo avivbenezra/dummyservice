@@ -9,9 +9,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: main
-    repoURL: https://dev.azure.com/Payoneer/Payoneer/_git/devops-argo-apps-gitops-mgmt
-    targetRevision: master
+    path: argocd
+    repoURL: https://github.com/avivbenezra/dummyservice.git
+    targetRevision: main
     directory:
       recurse: true
   syncPolicy:

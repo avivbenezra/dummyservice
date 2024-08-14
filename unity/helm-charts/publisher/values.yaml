@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: your-docker-repo/publisher
+  repository: https://registry-1.docker.io/avivbe594/dummy:publisher1
   pullPolicy: IfNotPresent
   tag: "latest"
 

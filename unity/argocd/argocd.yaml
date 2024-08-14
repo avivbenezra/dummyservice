@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://dev.azure.com/Payoneer/DevOps/_git/devops-k8s-argocd
-    targetRevision: V2.11.3
+    repoURL: https://github.com/argoproj/argo-cd.git
+    targetRevision: v2.12.0
     path: mgmt
   destination:
     server: https://kubernetes.default.svc
